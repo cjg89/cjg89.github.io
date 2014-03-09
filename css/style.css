@@ -1,0 +1,181 @@
+body { 
+	color: #554c4c;
+	letter-spacing: 0.04em;
+	background: #fff;
+	/* thanks, Andrew Munsell: http://www.andrewmunsell.com/blog/multiple-gradients-css/ */
+	background-image: 
+	   -webkit-radial-gradient(80% 10%, circle, rgba(255, 183, 168, 0.25), rgba(255, 225, 163, 0.4)),
+	   -webkit-radial-gradient(20% 70%, circle, rgba(255, 225, 163, 0.4), rgba(255, 183, 168, 0.25));
+	background-image:
+	   -moz-radial-gradient(80% 10%, circle, rgba(255, 183, 168, 0.25), rgba(255, 225, 163, 0.4)),
+	   -moz-radial-gradient(20% 70%, circle, rgba(255, 225, 163, 0.4), rgba(255, 183, 168, 0.25));
+	background-image:
+	   radial-gradient(80% 10%, circle, rgba(255, 183, 168, 0.25), rgba(255, 225, 163, 0.4)),
+	   radial-gradient(20% 70%, circle, rgba(255, 225, 163, 0.4), rgba(255, 183, 168, 0.25));
+}
+body a { color: #554c4c; text-decoration: none; }
+body a:hover,
+body a:focus { color: #F98459; transition: color .2s ease-in-out; }
+
+header { padding: 90px 0 60px 0; text-align: center; }
+header h1 {
+	background: url('../img/pg-title.png') center center no-repeat;
+	display: block;
+	margin: auto;
+	text-indent: -9999px;
+	width: 235px;
+	height: 37px;
+}
+header .subtitle {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #7e7070;
+}
+#self-photo {
+	display: block;
+	background: #000;
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	margin: 30px auto;
+	border: 5px solid #fff;
+}
+header nav ul { list-style-type: none; display: inline-block; margin: 20px auto 0 auto; padding: 0; }
+header nav ul li { display: block; float: left; margin: 0 10px; }
+header nav ul li a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	background: url('../img/social.png');
+	background-size: 200px 100px;
+}
+header nav ul li.linkedin a { background-position: 0 0; }
+header nav ul li.linkedin a:hover,
+header nav ul li.linkedin a:focus {
+	background-position: 0 50px;
+}
+header nav ul li.twitter a { background-position: 150px 0; }
+header nav ul li.twitter a:hover,
+header nav ul li.twitter a:focus {
+	background-position: 150px 50px;
+}
+header nav ul li.github a { background-position: 100px 0; }
+header nav ul li.github a:hover,
+header nav ul li.github a:focus {
+	background-position: 100px 50px;
+}
+header nav ul li.email a { background-position: 50px 0; }
+header nav ul li.email a:hover,
+header nav ul li.email a:focus {
+	background-position: 50px 50px;
+}
+header nav ul li a span { display: block; text-indent: -9999px; width: 0; height: 0; }
+header .description {
+	font-family: 'Nexa-Slab-Regular';
+	font-size: 20px;
+	line-height: 30px;
+	margin: 50px auto 0 auto;
+	padding: 0 15%;
+	max-width: 1200px;
+}
+header .description p { margin-top: 15px; }
+header .description a { font-weight: bold; }
+
+#projects { list-style-type: none; display: block; margin: auto; width: 85%; max-width: 1400px; padding: 0; }
+#projects li { display: block; width: 50%; float: left; margin-bottom: 50px; }
+#projects li:nth-child(even) { clear: right; }
+#projects li:nth-child(odd) { clear: left; }
+#projects li a {
+	display: block;
+	margin: auto;
+	width: 90%;
+	max-width: 550px;
+}
+#projects li a .photo-wrap {
+	width: 100%;
+	height: 250px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: #fff;
+}
+#projects li a h2 {
+	text-align: center;
+	font-family: 'Nexa-Slab-Regular', serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	padding: 24px 15px 10px 15px;
+	margin: 5px 0 0 0;
+}
+#projects li a .technologies {
+	padding: 0 15px 25px 15px;
+	list-style-type: none;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+	color: #7e7070;
+}
+#projects li a h2,
+#projects li a .technologies {
+	background-color: rgba(255,255,255,0.7);
+	transition: all 0.2s ease-in-out;
+}
+#projects li a:hover h2,
+#projects li a:hover .technologies {
+	background-color: #F98459;
+	color: #fff;
+}
+#projects li a .technologies li {
+	display: inline-block;
+	width: auto;
+	float: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 5px;
+}
+#projects li a .technologies li:before {
+	content: "•";
+	padding-left: 2px;
+	padding-right: 8px;
+}
+#projects li a .technologies li:first-child:before { content: ""; padding: 0; }
+
+
+@media (max-width: 940px) {
+	#projects { width: 90%; }
+	#projects li a .photo-wrap { height: 200px; }
+	#projects li a h2 { font-size: 20px; line-height: 26px; }
+	#projects li a .technologies li { font-size: 14px; line-height: 14px; }
+}
+
+@media (max-width: 767px) {
+	header { padding: 30px; }
+	header .description { padding: 0; margin-top: 30px; }
+	#projects { width: 95%; }
+	#projects li { width: 100%; float: left; clear: both; }
+	#projects li:nth-child(even),
+	#projects li:nth-child(odd) {
+		clear: both;
+	}
+	#projects li a .photo-wrap { height: 250px; }
+}
+
+@media (max-width: 480px) {
+	header { padding-top: 30px; padding-bottom: 30px; }
+	header h1 { background-size: 175px 28px; width: 175px; height: 28px; }
+	header .subtitle { font-size: 14px; margin-top: 8px; }
+	header nav ul { margin-top: 10px; }
+	header .description { font-size: 16px; line-height: 22px; margin-top: 20px; }
+	#projects li a .photo-wrap { height: 175px; }
+	#projects li a h2 { font-size: 16px; line-height: 20px; padding-top: 12px; }
+	#projects li a .technologies { padding-bottom: 12px; }
+	#projects li a .technologies li { font-size: 12px; line-height: 8px; }
+	#projects li a .technologies li:before { padding-left: 0; padding-right: 5px; }
+}
