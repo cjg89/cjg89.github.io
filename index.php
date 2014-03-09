@@ -8,6 +8,7 @@ $projects = $content->projects;
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<title><?=$info->site_titletag?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +17,8 @@ $projects = $content->projects;
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/fontawesome/font.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/nexa-slab-bold/font.css" />
-		<link href="http://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="fonts/tex-gyre-schola-italic/font.css" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Varela" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -31,8 +32,8 @@ $projects = $content->projects;
 				foreach($info->contact as $key => $val) {
 				?>
 					<li class="<?=$key?>">
-						<a href="<?=$val->url?>" target="_blank" title="<?=$val->alt_text?>">
-							<span><?=$val->name?></span>
+						<a href="<?=$val->url?>" target="_blank">
+							<i class="<?=$val->icon_class?>"></i><?=$val->alt_text?>
 						</a>
 					</li>
 				<?php	
@@ -43,31 +44,37 @@ $projects = $content->projects;
 			<div class="description"><?=$info->description?></div>
 		</header>
 		<main>
-			<ul id="projects">
-			<?php
-			foreach($projects as $key => $project) {
-			?>
-				<li>
+		<?php
+		foreach($projects as $key => $project) {
+		?>
+			<section class="project">
+				<div class="screenshot" style="background-color: <?=$project->color?>;">
 					<a href="<?=$project->url?>" target="_blank">
-						<div class="photo-wrap" style="background-image: url('<?=$project->photo?>')">
-							<img src="<?=$project->photo?>" alt="<?=$project->name?>" title="<?=$project->name?>" />
-						</div>
-						<h2><?=$project->name?></h2>
-						<ul class="technologies">
+						<img src="<?=$project->photo?>" alt="<?=$project->name?>" title="<?=$project->name?>" />
+						<span style="background-color: <?=$project->color?>;">View Website</span>
+					</a>
+				</div>
+				<div class="inner">
+					<h2><a href="<?=$project->url?>"><?=$project->name?></a></h2>
+					<p class="description"><?=$project->desc?></p>
+					<div class="about"><?=$project->about?></div>
+					<div class="skills">
+						<h3>Skills Contributed:</h3>
+						<ul>
 						<?php
-						foreach ($project->technology as $tech) {
+						foreach ($project->technology as $skill) {
 						?>
-							<li><?=$tech?></li>
+							<li><?=$skill?></li>
 						<?php
 						}
 						?>	
 						</ul>
-					</a>
-				</li>
-			<?php
-			}
-			?>
-			</ul>
+					</div>
+				</div>
+			</section>
+		<?php
+		}
+		?>
 		</main>
 	</body>
 </html>
