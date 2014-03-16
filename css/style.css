@@ -49,7 +49,7 @@ header nav ul {
 	font-size: 18px;
 	line-height: 18px;
 }
-header nav li {	display: inline-block; position: relative; padding-left: 20px; }
+header nav li { display: inline-block; position: relative; padding-left: 20px; }
 header nav li:before {
 	content: "|";
 	display: block;
@@ -72,9 +72,15 @@ header .description a { text-decoration: underline; color: #695a5a; }
 
 /* Projects */
 .project { text-align: center; }
-.project .screenshot { padding-top: 30px; }
+.project .screenshot { overflow: hidden; }
 .project .screenshot img { max-width: 100%; }
-.project .screenshot a { display: block; position: relative; max-width: 760px; margin: auto; }
+.project .screenshot a {
+	display: block;
+	position: relative;
+	max-width: 850px;
+	margin: 0 auto -85px auto;
+	color: #fff;
+}
 .project .screenshot a span {
 	display: none;
 	position: absolute;
@@ -156,4 +162,6 @@ header .description a { text-decoration: underline; color: #695a5a; }
 	header nav li:before { left: 6px; }
 
 	header .description { font-size: 14px; line-height: 20px; margin-top: 20px; }
+
+	.project .screenshot { min-height: 160px; }
 }
