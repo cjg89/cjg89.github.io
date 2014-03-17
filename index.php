@@ -8,7 +8,6 @@ $projects = $content->projects;
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<title><?=$info->site_titletag?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +26,7 @@ $projects = $content->projects;
 			<p class="subtitle"><?=$info->subtitle?></p>
 			<!--<img id="self-photo" src="<?=$info->self_photo?>" alt="<?=$info->title?>" title="<?=$info->title?>" />-->
 			<nav>
-				<ul>
+				<ul class="contact-links">
 				<?php 
 				foreach($info->contact as $key => $val) {
 				?>
@@ -48,17 +47,17 @@ $projects = $content->projects;
 		foreach($projects as $key => $project) {
 		?>
 			<section class="project">
-				<div class="screenshot" style="background-color: <?=$project->color?>;">
+				<div class="screenshot" style="background-color: <?=$project->color_bg?>;">
 					<a href="<?=$project->url?>" target="_blank">
 						<img src="<?=$project->photo?>" alt="<?=$project->name?>" title="<?=$project->name?>" />
-						<span style="background-color: <?=$project->color?>;">View Website</span>
+						<span class="animated" style="background-color: <?=$project->color_bg?>;<?php if ($project->color_btntext) { print ' color: '.$project->color_btntext.';'; } ?>">View Website</span>
 					</a>
 				</div>
 				<div class="inner">
 					<h2><a href="<?=$project->url?>"><?=$project->name?></a></h2>
 					<p class="description"><?=$project->desc?></p>
 					<div class="about"><?=$project->about?></div>
-					<div class="skills">
+					<div class="details">
 						<h3>Skills Contributed:</h3>
 						<ul>
 						<?php
@@ -76,5 +75,24 @@ $projects = $content->projects;
 		}
 		?>
 		</main>
+		<footer>
+			<p>
+				<?=$info->site_titletag?><br/>
+				<small>Built with love and <a target="_blank" href="http://validator.w3.org/check?uri=referer">valid markup</a></small>
+			</p>
+			<ul class="contact-links">
+				<?php 
+				foreach($info->contact as $key => $val) {
+				?>
+					<li class="<?=$key?>">
+						<a href="<?=$val->url?>" target="_blank">
+							<i class="<?=$val->icon_class?>"></i><?=$val->alt_text?>
+						</a>
+					</li>
+				<?php	
+				}
+				?>
+				</ul>
+		</footer>
 	</body>
 </html>
