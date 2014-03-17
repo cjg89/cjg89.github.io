@@ -226,6 +226,7 @@ footer { border-top: 1px solid #d5d5cd; margin-top: 80px; }
 
 
 @media (max-width: 940px) {
+	.project .screenshot a:hover span { display: none; }
 }
 
 @media (max-width: 767px) {
@@ -242,8 +243,6 @@ footer { border-top: 1px solid #d5d5cd; margin-top: 80px; }
 		padding: 0;
 		border: 0;
 	}
-
-	.project .screenshot a:hover span { display: none; }
 }
 
 @media (max-width: 480px) {
