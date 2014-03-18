@@ -17,7 +17,7 @@ $projects = $content->projects;
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/fontawesome/font.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/tex-gyre-schola-italic/font.css" />
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Varela" />
+		<link rel="stylesheet" type="text/css" href="fonts/varela/font.css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -27,7 +27,6 @@ $projects = $content->projects;
 
 		  ga('create', 'UA-28550607-1', 'jodickson.com');
 		  ga('send', 'pageview');
-
 		</script>
 	</head>
 	<body>
