@@ -9,16 +9,16 @@ $projects = $content->projects;
 <html>
 	<head>
 		<title><?=$info->site_titletag?></title>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/fontawesome/font.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/tex-gyre-schola-italic/font.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/varela/font.css" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="fonts/fontawesome/font.css">
+		<link rel="stylesheet" type="text/css" href="fonts/tex-gyre-schola-italic/font.css">
+		<link rel="stylesheet" type="text/css" href="fonts/varela/font.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -33,10 +33,9 @@ $projects = $content->projects;
 		<header>
 			<h1><?=$info->title?></h1>
 			<p class="subtitle"><?=$info->subtitle?></p>
-			<!--<img id="self-photo" src="<?=$info->self_photo?>" alt="<?=$info->title?>" title="<?=$info->title?>" />-->
 			<nav>
 				<ul class="contact-links">
-				<?php 
+				<?php
 				foreach($info->contact as $key => $val) {
 				?>
 					<li class="<?=$key?>">
@@ -44,7 +43,7 @@ $projects = $content->projects;
 							<i class="<?=$val->icon_class?>"></i><?=$val->alt_text?>
 						</a>
 					</li>
-				<?php	
+				<?php
 				}
 				?>
 				</ul>
@@ -75,7 +74,7 @@ $projects = $content->projects;
 							<li><?=$skill?></li>
 						<?php
 						}
-						?>	
+						?>
 						</ul>
 					</div>
 				</div>
@@ -90,7 +89,7 @@ $projects = $content->projects;
 				<small>Built with love and <a target="_blank" href="http://validator.w3.org/check?uri=referer">valid markup</a></small>
 			</p>
 			<ul class="contact-links">
-				<?php 
+				<?php
 				foreach($info->contact as $key => $val) {
 				?>
 					<li class="<?=$key?>">
@@ -98,7 +97,7 @@ $projects = $content->projects;
 							<i class="<?=$val->icon_class?>"></i><?=$val->alt_text?>
 						</a>
 					</li>
-				<?php	
+				<?php
 				}
 				?>
 				</ul>
