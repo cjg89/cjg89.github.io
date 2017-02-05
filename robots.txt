@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /static/
+Disallow: /src/
+Disallow: /CNAME
+Disallow: /gulpfile.js
+Disallow: /.gitignore
+Disallow: /package.json
