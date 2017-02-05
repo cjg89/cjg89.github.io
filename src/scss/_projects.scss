@@ -1,0 +1,141 @@
+.project {
+  text-align: center;
+
+  h2 {
+    font-family: $font-family-serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: $brown-dark;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $salmon;
+      }
+    }
+  }
+
+  .screenshot {
+    min-height: 160px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: $white;
+      display: block;
+      margin: 0 auto -85px;
+      max-width: 850px;
+      position: relative;
+
+      &:hover span {
+        @media (min-width: 941px) {
+          animation-name: flipInX;
+          backface-visibility: visible;
+          display: block;
+        }
+      }
+
+      span {
+        border-radius: 8px;
+        box-shadow: 0 5px 5px 0 rgba(50, 50, 50, .4);
+        box-sizing: border-box;
+        display: none;
+        font-size: 22px;
+        left: 0;
+        margin: auto;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        top: 40%;
+        width: 300px;
+      }
+    }
+  }
+
+  .inner {
+    margin: 15px auto 30px;
+    max-width: 760px;
+    padding: 0 20px;
+    white-space: nowrap;
+
+    @media (min-width: 480px) {
+      margin: 30px auto 50px;
+    }
+
+    > * {
+      white-space: normal;
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    margin-top: 5px;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+  }
+
+  .about,
+  .details {
+    display: block;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .about {
+    @media (min-width: 768px) {
+      padding-right: 25px;
+      width: 60%;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+  }
+
+  .details {
+    @media (min-width: 768px) {
+      border-left: 1px solid $brown-light;
+      padding-left: 25px;
+      width: 40%;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 15px;
+    }
+
+    li {
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+  }
+}
