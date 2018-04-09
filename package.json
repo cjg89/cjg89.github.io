@@ -15,15 +15,13 @@
   "bugs": {
     "url": "https://github.com/cjg89/portfolio/issues"
   },
-  "homepage": "https://github.com/cjg89/portfolio#readme",
   "dependencies": {
-    "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.3.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-scss-lint": "^0.4.0",
-    "normalize.css": "^5.0.0"
+    "gulp-sass": "^4.0.0",
+    "gulp-scss-lint": "^0.6.1"
   }
 }

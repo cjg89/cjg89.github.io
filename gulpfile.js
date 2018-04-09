@@ -1,14 +1,11 @@
 var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cleanCSS = require('gulp-clean-css'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    scsslint = require('gulp-scss-lint');
+  autoprefixer = require('gulp-autoprefixer'),
+  cleanCSS = require('gulp-clean-css'),
+  rename = require('gulp-rename'),
+  sass = require('gulp-sass'),
+  scsslint = require('gulp-scss-lint');
 
 var config = {
-  local: {
-    fontPath: './local/fonts'
-  },
   src: {
     scssPath: './src/scss'
   },
@@ -17,17 +14,6 @@ var config = {
     fontPath: './static/fonts'
   }
 };
-
-
-//
-// Fonts
-//
-
-// Web font processing
-gulp.task('fonts', function() {
-  return gulp.src(config.local.fontPath + '/**/*')
-    .pipe(gulp.dest(config.dist.fontPath));
-});
 
 
 //
@@ -69,4 +55,4 @@ gulp.task('watch', function() {
 //
 // Default task
 //
-gulp.task('default', ['fonts', 'css']);
+gulp.task('default', ['css']);
