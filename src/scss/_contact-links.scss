@@ -1,3 +1,7 @@
+//
+// Reusable styles for contact, social links
+//
+
 .contact-links {
   align-items: center;
   display: inline-flex;
@@ -5,19 +9,34 @@
   margin: 0;
   padding: 0;
 
+  @media (min-width: 768px) {
+    margin-bottom: .5rem;
+  }
+
   li {
+    align-items: center;
+    display: flex;
+
     &:not(:first-child) {
       padding-left: 1rem;
     }
   }
 
   .email a {
-    color: $body-color;
-    text-decoration: underline;
+    border: 2px solid $mauve;
+    border-radius: .5em;
+    display: block;
+    font-size: $font-size-h4;
+    font-weight: 400;
+    padding: .25em .5em;
+    text-decoration: none;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out;
 
     &:hover,
-    &:focus {
-      color: $link-color;
+    &:focus,
+    &:active {
+      background-color: $mauve;
+      color: $white;
     }
   }
 
@@ -25,6 +44,7 @@
     display: inline-block;
     fill: currentColor;
     height: 2rem;
+    vertical-align: sub;
     width: 2rem;
   }
 }

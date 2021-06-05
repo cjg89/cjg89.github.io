@@ -1,15 +1,23 @@
-$font-family-serif: 'Zilla Slab', serif;
-$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-serif: 'Recoleta-RegularDEMO', serif;
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
 $font-family-base: $font-family-sans-serif;
 
-$beige-light: #f9f6f1;
-$mauve:       #ae4242;
-$mauve-gradient: linear-gradient(to right, #ffedce, #f2b2a8);
+$font-size-base: clamp(1rem, 3vw, 1.75rem);
+$font-size-h1: clamp(2.75rem, 7vw, 4.75rem);
+$font-size-h2: $font-size-base;
+$font-size-h3: clamp(1.75rem, 3.75vw, 2.625rem);
+$font-size-h4: clamp(1rem, 2.25vw, 1.2rem);
+$font-size-h5: clamp(.9rem, 1.5vw, 1.1rem);
+$font-size-h6: clamp(.8rem, 1vw, 1rem);
+$font-size-lead: clamp(1.75rem, 5vw, 3.125rem);
+
+$beige-light: #efdcd3;
+$mauve-light: #ccb7b2;
+$mauve:       #847171;
+$mauve-dark:  #534946;
 $white:       #fff;
 $black:       #020202;
 $gray:        #565656;
 
-$body-color: $black;
-$link-color: $mauve;
-$project-box-shadow: 0 0 1rem #e4e0da;
-$project-info-border: 1px solid darken($beige-light, 5%);
+$body-color: $mauve-dark;
+$link-color: $mauve-dark;

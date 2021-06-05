@@ -1,222 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Carolyn Jo Dickson Online Portfolio | Full-stack Web Development and Design</title>
+    <title>Carolyn Jo Dickson | Full-stack Web Development and Design Portfolio</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Zilla+Slab:300,300i,500i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+    /**
+     * @license
+     * MyFonts Webfont Build ID 4093376, 2021-05-24T20:35:44-0400
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: Recoleta-RegularDEMO by Latinotype
+     * URL: https://www.myfonts.com/fonts/latinotype/recoleta/regular-demo/
+     * Copyright: Copyright &amp;#x00A9; 2018 by Jorge Cisterna. All rights reserved.
+     *
+     *
+     *
+     * © 2021 MyFonts Inc
+     */
+    @font-face {
+      font-family: "Recoleta-RegularDEMO";
+      src: url('static/fonts/RecoletaRegularDEMO/font.woff2') format('woff2');
+    }
+    </style>
     <link href="static/css/style.min.css" rel="stylesheet" type="text/css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-28550607-1', 'jodickson.com');
-      ga('send', 'pageview');
-    </script>
   </head>
   <body>
 
     <header class="site-header block">
       <div class="site-info">
-        <h1 class="site-title">Jo Dickson</h1>
-        <p class="site-subtitle">Web Development &amp; Design Portfolio</p>
+        <p>Hi! I&rsquo;m</p>
+        <div class="site-title">
+          <h1 class="site-title-part">Jo Dickson</h1><span class="site-title-part">,</span>
+        </div>
+        <p>a full-stack web developer located in sunny Central Florida.</p>
       </div>
-      <nav class="site-nav">
-        <ul class="contact-links">
-          <li class="email">
-            <a href="mailto:jo@jodickson.com" aria-label="Email me">
-              jo@jodickson.com
-            </a>
-          </li>
-          <li class="linkedin">
-            <a href="http://www.linkedin.com/pub/carolyn-jo-dickson/31/891/4a8" target="_blank" aria-label="View my LinkedIn profile">
-              <svg class="icon icon-linkedin-square"><use xlink:href="static/img/symbol-defs.svg#icon-linkedin-square"></use></svg>
-            </a>
-          </li>
-          <li class="github">
-            <a href="http://github.com/cjg89" target="_blank" aria-label="View my Github profile">
-              <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="contact-links">
+        <li class="email">
+          <a href="mailto:jo@jodickson.com">
+            Contact Me
+          </a>
+        </li>
+        <li class="linkedin">
+          <a href="http://www.linkedin.com/pub/carolyn-jo-dickson/31/891/4a8" target="_blank">
+            <svg class="icon icon-linkedin-square"><use xlink:href="static/img/symbol-defs.svg#icon-linkedin-square"></use></svg>
+            <span class="sr-only">View my LinkedIn profile</span>
+          </a>
+        </li>
+        <li class="github">
+          <a href="http://github.com/cjg89" target="_blank">
+            <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
+            <span class="sr-only">View my Github profile</span>
+          </a>
+        </li>
+      </ul>
     </header>
 
     <main class="site-main">
 
-      <section class="site-description block">
-        <p>Hi!  I&rsquo;m a full-stack web developer located in Central Florida.  I love designing and building <strong>beautiful</strong>, <strong>user-friendly</strong>, and <strong>accessible</strong> interfaces.</p>
+      <section class="site-description block" aria-labelledby="site-description-heading">
+        <h2 id="site-description-heading">
+          About Me
+        </h2>
+        <p class="lead">
+          I love solving complex problems through design and code.
+        </p>
+        <p>
+          My experience in my current position at the University of Central Florida as a web applications programmer includes designing and building high-visibility, enterprise-level applications and front-facing websites, as well as various tools/plugins to support them.
+        </p>
       </section>
 
-      <section class="projects block">
+      <section aria-labelledby="projects-heading">
+        <div class="block">
+          <h2 id="projects-heading">
+            Featured Projects
+          </h2>
+        </div>
 
         <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/athena-framework.jpg');"></div>
           <div class="project-info">
-            <h2 class="project-title">
+            <h3 class="project-title">
               <a href="https://ucf.github.io/Athena-Framework/">Athena Framework</a>
-            </h2>
+            </h3>
             <div class="project-about">
-              <p>A front-end web development framework for University of Central Florida websites, based on Bootstrap 4.</p>
+              <p>A frontend web development framework for University of Central Florida websites.</p>
             </div>
             <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
+              <ul class="project-tech">
+                <li>Sass</li>
+                <li>JavaScript</li>
+                <li>Gulp</li>
+                <li>Eleventy</li>
+              </ul>
+              <h4 class="project-subheading">Contributions:</h4>
               <ul class="project-contributions">
                 <li>Project lead</li>
                 <li>Design and planning</li>
-                <li>Development</li>
-                <li>Documentation (writing and Jekyll development)</li>
+                <li>Development, including build tools</li>
+                <li>Documentation (writing and static site generation)</li>
               </ul>
             </div>
             <a class="code-link" href="https://github.com/UCF/Athena-Framework" target="_blank">
               <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-              View code on Github
+              <span>View code on Github</span>
             </a>
+          </div>
+          <div class="project-screenshot">
+            <img class="project-screenshot-img" src="static/img/athena-framework.jpg" alt="" loading="lazy" width="800"
+              height="478">
           </div>
         </article>
 
         <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/ucfedu.jpg');"></div>
           <div class="project-info">
-            <h2 class="project-title">
-              <a href="https://www.ucf.edu/">ucf.edu</a>
-            </h2>
+            <h3 class="project-title">
+              <a href="https://search.cm.ucf.edu/">UCF Search Service</a>
+            </h3>
             <div class="project-about">
-              <p>UCF's primary front-facing website. Version 3 of the site's WordPress theme was built concurrently with a new suite of UCF-specific WordPress plugins for added functionality.</p>
+              <p>A REST-ful web service for querying against UCF data, including degree programs and teledata. Includes a suite
+                of importers and processes for gathering, sanitizing, and consolidating data from external sources.</p>
             </div>
             <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
+              <ul class="project-tech">
+                <li>Python</li>
+                <li>Django REST Framework</li>
+                <li>Amazon Comprehend</li>
+                <li>Amazon Rekognition</li>
+              </ul>
+              <h4 class="project-subheading">Contributions:</h4>
               <ul class="project-contributions">
-                <li>WordPress theme and plugin development</li>
+                <li>Data importing, matching and consolidation from various external systems</li>
+                <li>String content recognition and HTML sanitization</li>
+                <li>Image recognition and tagging</li>
+                <li>Development of API endpoints</li>
+                <li>End-user documentation</li>
+              </ul>
+            </div>
+            <a class="code-link" href="https://github.com/UCF/Search-Service-Django" target="_blank">
+              <svg class="icon icon-mark-github">
+                <use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use>
+              </svg>
+              <span>View code on Github</span>
+            </a>
+          </div>
+          <div class="project-screenshot">
+            <img class="project-screenshot-img" src="static/img/search-service.png" alt="" loading="lazy" width="800"
+              height="478">
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-info">
+            <h3 class="project-title">
+              <a href="https://www.ucf.edu/">ucf.edu</a>
+            </h3>
+            <div class="project-about">
+              <p>UCF's primary front-facing website.</p>
+            </div>
+            <div class="project-details">
+              <ul class="project-tech">
+                <li>PHP</li>
+                <li>WordPress</li>
+                <li>Sass</li>
+                <li>JavaScript</li>
+              </ul>
+              <h4 class="project-subheading">Contributions:</h4>
+              <ul class="project-contributions">
+                <li>Theme and plugin development</li>
                 <li>Design</li>
-                <li>Refactoring of page content</li>
+                <li>Page content markup</li>
               </ul>
             </div>
             <a class="code-link" href="https://github.com/UCF/Main-Site-Theme" target="_blank">
               <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-              View code on Github
+              <span>View code on Github</span>
             </a>
           </div>
-        </article>
-
-        <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/events.jpg');"></div>
-          <div class="project-info">
-            <h2 class="project-title">
-              <a href="https://events.ucf.edu">Events at UCF</a>
-            </h2>
-            <div class="project-about">
-              <p>UCF's online event calendar system, built in Python/Django.</p>
-            </div>
-            <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
-              <ul class="project-contributions">
-                <li>Django development</li>
-                <li>Elasticsearch integration</li>
-                <li>Front-end templating</li>
-                <li>Preliminary designs</li>
-                <li>End-user documentation</li>
-              </ul>
-            </div>
-            <a class="code-link" href="https://github.com/UCF/unify-events" target="_blank">
-              <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-              View code on Github
-            </a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/ucf-online.jpg');"></div>
-          <div class="project-info">
-            <h2 class="project-title">
-              <a href="http://www.ucf.edu/online">UCF Online</a>
-            </h2>
-            <div class="project-about">
-              <p>UCF Online's website runs on a custom WordPress theme with extensive Gravity Forms plugin usage and Salesforce integration.  Plugin hooks help conditionally forward prospective student information to degree program contacts.</p>
-            </div>
-            <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
-              <ul class="project-contributions">
-                <li>WordPress theme and plugin development</li>
-                <li>Third-party plugin and service integration</li>
-                <li>Site migration planning and management</li>
-              </ul>
-            </div>
-            <a class="code-link" href="https://github.com/UCF/Online-Theme" target="_blank">
-              <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-              View code on Github
-            </a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/pegasus.jpg');"></div>
-          <div class="project-info">
-            <h2 class="project-title">
-              <a href="https://www.ucf.edu/pegasus/">Pegasus Magazine Online</a>
-            </h2>
-            <div class="project-about">
-              <p>Highly-customized WordPress site that allows for individual stories to be either built off of a pre-built template, or written with completely custom HTML/CSS/JavaScript.</p>
-            </div>
-            <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
-              <ul class="project-contributions">
-                <li>WordPress theme development</li>
-                <li>Navigation and post template design and development</li>
-                <li>Custom story design and development</li>
-                <li>Documentation for content editors</li>
-              </ul>
-            </div>
-            <a class="code-link" href="https://github.com/UCF/Pegasus-Theme" target="_blank">
-              <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-              View code on Github
-            </a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/something-about-navy.jpg');"></div>
-          <div class="project-info">
-            <h2 class="project-title">
-              <a href="http://somethingaboutnavy.com">Something About Navy</a>
-            </h2>
-            <div class="project-about">
-              <p>Fashion, cooking and lifestyle WordPress blog.</p>
-            </div>
-            <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
-              <ul class="project-contributions">
-                <li>Design</li>
-                <li>WordPress theme development</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-screenshot" style="background-image: url('static/img/ucf-header.jpg');"></div>
-          <div class="project-info">
-            <h2 class="project-title">
-              <a href="https://universityheader.ucf.edu/">UCF University Header JavaScript Widget</a>
-            </h2>
-            <div class="project-about">
-              <p>JavaScript branding tool for University of Central Florida websites.</p>
-            </div>
-            <div class="project-details">
-              <h3 class="project-subheading">Contributions:</h3>
-              <ul class="project-contributions">
-                <li>Design</li>
-                <li>JavaScript development</li>
-                <li>Accessibility improvements</li>
-              </ul>
-            </div>
-            <a class="code-link" href="https://github.com/UCF/UCF-Header" target="_blank">
-              <svg class="icon icon-mark-github"><use xlink:href="static/img/symbol-defs.svg#icon-mark-github"></use></svg>
-              View code on Github
-            </a>
+          <div class="project-screenshot">
+            <img class="project-screenshot-img" src="static/img/ucfedu.jpg" alt="" width="800" height="478" loading="lazy">
           </div>
         </article>
       </section>
@@ -229,8 +198,8 @@
       </p>
       <ul class="contact-links">
         <li class="email">
-          <a href="mailto:jo@jodickson.com" aria-label="Email me">
-            jo@jodickson.com
+          <a href="mailto:jo@jodickson.com">
+            Contact Me
           </a>
         </li>
         <li class="linkedin">

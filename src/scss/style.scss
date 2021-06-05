@@ -1,12 +1,11 @@
-// Variables
+// Variables and mixins
 @import 'variables';
-
-
-// CSS resets
-@import '../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import 'mixins';
 
 
 // Everything else
+@import 'base';
+
 @import 'typography';
 
 @import 'layout';

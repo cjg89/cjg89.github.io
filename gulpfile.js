@@ -1,11 +1,11 @@
-var gulp = require('gulp'),
-  autoprefixer = require('gulp-autoprefixer'),
-  cleanCSS = require('gulp-clean-css'),
-  rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  scsslint = require('gulp-scss-lint');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const scsslint = require('gulp-sass-lint');
 
-var config = {
+const config = {
   src: {
     scssPath: './src/scss'
   },
@@ -21,8 +21,8 @@ var config = {
 //
 
 // Lint scss files
-gulp.task('scss-lint', function() {
-  return gulp.src(config.src.scssPath + '/*.scss')
+gulp.task('scss-lint', () => {
+  return gulp.src(`${config.src.scssPath}/*.scss`)
     .pipe(scsslint({
       'maxBuffer': 400 * 1024  // default: 300 * 1024
     }));
@@ -30,7 +30,7 @@ gulp.task('scss-lint', function() {
 
 // Compile scss files
 gulp.task('scss-build', function() {
-  return gulp.src(config.src.scssPath + '/style.scss')
+  return gulp.src(`${config.src.scssPath}/style.scss`)
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(autoprefixer({
@@ -41,18 +41,18 @@ gulp.task('scss-build', function() {
 });
 
 // All css-related tasks
-gulp.task('css', ['scss-lint', 'scss-build']);
+gulp.task('css', gulp.series('scss-lint', 'scss-build'));
 
 
 //
 // Rerun tasks when files change
 //
-gulp.task('watch', function() {
-  gulp.watch(config.src.scssPath + '/**/*.scss', ['css']);
+gulp.task('watch', () => {
+  gulp.watch(`${config.src.scssPath}/**/*.scss`, gulp.series('css'));
 });
 
 
 //
 // Default task
 //
-gulp.task('default', ['css']);
+gulp.task('default', gulp.series('css'));
