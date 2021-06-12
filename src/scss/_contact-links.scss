@@ -28,7 +28,7 @@
     display: block;
     font-size: $font-size-h4;
     font-weight: 400;
-    padding: .25em .5em;
+    padding: .5em .75em;
     text-decoration: none;
     transition: background-color .25s ease-in-out, color .25s ease-in-out;
 
@@ -43,8 +43,8 @@
   .icon {
     display: inline-block;
     fill: currentColor;
-    height: 2rem;
+    height: 2.75rem;
     vertical-align: sub;
-    width: 2rem;
+    width: 2.75rem;
   }
 }
